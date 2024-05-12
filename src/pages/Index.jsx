@@ -9,9 +9,9 @@ import { Box, Circle, SimpleGrid } from '@chakra-ui/react';
 const Index = () => {
   return (
     <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center">
-      <SimpleGrid columns={[4, 8]} spacing="40px">
-        {Array.from({ length: 64 }).map((_, index) => (
-          <Circle size="80px" bg="brand.700" key={index} />
+      <SimpleGrid columns={[5, 5]} spacing="40px">
+        {Array.from({ length: 25 }).map((_, index) => (
+          <Circle size="60px" bg="brand.700" key={index} />
         ))}
       </SimpleGrid>
     </Box>
