@@ -8,10 +8,10 @@ import { Box, Circle, SimpleGrid } from '@chakra-ui/react';
 
 const Index = () => {
   return (
-    <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center">
+    <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center" bg="black">
       <SimpleGrid columns={[4, 8]} spacing="20px">
         {Array.from({ length: 64 }).map((_, index) => (
-          <Circle size="40px" bg="brand.700" key={index} />
+          <Circle size="40px" bg="white" key={index} />
         ))}
       </SimpleGrid>
     </Box>
