@@ -2,7 +2,7 @@
 // Use chakra-ui
 import './Index.css';
 import { css } from '@emotion/react';
-import { Box, Circle, SimpleGrid } from '@chakra-ui/react';
+import { Box, Circle, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 
 // Example of using react-icons
 // import { FaRocket } from "react-icons/fa";
@@ -15,6 +15,11 @@ const Index = () => {
         {Array.from({ length: 64 }).map((_, index) => (
           <Circle
             size="80px"
+            bg={useColorModeValue('gray.700', 'green.500')}
+            _hover={{
+              bg: 'green.500',
+              transition: 'background-color 0.3s ease-in-out'
+            }}
             css={css`
               animation-delay: ${index * 0.1}s;
             `}
