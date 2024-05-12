@@ -12,7 +12,7 @@ const Index = () => {
     <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center" bgColor="black">
       <SimpleGrid columns={[4, 8]} spacing="40px">
         {Array.from({ length: 64 }).map((_, index) => (
-          <Circle size="80px" className="animated-circle" key={index} />
+          <Circle size="80px" className="animated-circle hover-animate-green" key={index} />
         ))}
       </SimpleGrid>
     </Box>
