@@ -3,9 +3,14 @@ body {
 }
 
 .animated-circle {
-   background: linear-gradient(270deg, white, gray);
+   background: linear-gradient(270deg, red, yellow);
    background-size: 400% 400%;
    animation: AnimationName 6s ease infinite;
+}
+
+.animated-circle:hover {
+   background: green;
+   transition: background-color 0.3s ease-in-out;
 }
 
 @keyframes AnimationName {
