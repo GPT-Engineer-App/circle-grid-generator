@@ -1,7 +1,8 @@
 // Update this page (the content is just a fallback if you fail and example)
 // Use chakra-ui
 import './Index.css';
-import { Box, Circle, SimpleGrid } from '@chakra-ui/react';
+import { css } from '@emotion/react';
+import { Box, Circle, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 
 // Example of using react-icons
 // import { FaRocket } from "react-icons/fa";
@@ -9,10 +10,22 @@ import { Box, Circle, SimpleGrid } from '@chakra-ui/react';
 
 const Index = () => {
   return (
-    <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center" bg="black">
+    <Box width="100%" height="100vh" display="flex" justifyContent="center" alignItems="center" bgColor="black">
       <SimpleGrid columns={[4, 8]} spacing="40px">
         {Array.from({ length: 64 }).map((_, index) => (
-          <Circle size="80px" className="animated-circle" key={index} bg="white" color="black" />
+          <Circle
+            size="80px"
+            bg={useColorModeValue('gray.700', 'green.500')}
+            _hover={{
+              bg: 'green.500',
+              transition: 'background-color 0.3s ease-in-out'
+            }}
+            css={css`
+              animation-delay: ${index * 0.1}s;
+            `}
+            className="animated-circle"
+            key={index}
+          />
         ))}
       </SimpleGrid>
     </Box>
