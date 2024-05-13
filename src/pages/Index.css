@@ -1,5 +1,5 @@
 .animated-circle {
-   background: linear-gradient(270deg, red, yellow);
+   background: linear-gradient(270deg, #e53e3e, #faf089);
    background-size: 400% 400%;
    animation: AnimationName 6s ease infinite;
 }
